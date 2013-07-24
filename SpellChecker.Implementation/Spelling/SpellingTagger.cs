@@ -423,6 +423,8 @@ namespace Microsoft.VisualStudio.Language.Spellchecker
                 string text = span.GetText();
                 if (string.IsNullOrWhiteSpace(text)) continue;
 
+                Debug.WriteLine("Spell-checking " + text);
+
                 int sentenceStart = 0;
 
                 foreach (var sentence in text.Split(new string[] { ". ", ", ", "; ", ": ", "? ", "! ", " \"", "\" ", "\".", "\",", "\";", "\"?", "\"!", "\":", " '", "' ", "'.", "', ", "';", "':", "'?", "'!" }, StringSplitOptions.None))

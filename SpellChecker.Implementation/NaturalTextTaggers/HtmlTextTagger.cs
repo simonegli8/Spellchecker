@@ -11,6 +11,7 @@ namespace Microsoft.VisualStudio.Language.Spellchecker
 {
     [Export(typeof(ITaggerProvider))]
     [ContentType("html")]
+    [ContentType("htmlx")]
     [TagType(typeof(NaturalTextTag))]
     internal class HtmlTextTaggerProvider : ITaggerProvider
     {

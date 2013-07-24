@@ -79,6 +79,7 @@ namespace Microsoft.VisualStudio.Language.Spellchecker
                 {
                     string name = classificationSpan.ClassificationType.Classification.ToLowerInvariant();
 
+                    Debug.WriteLine("HTML: Found " + name + ": " + classificationSpan.Span.GetText());
                     if ((name.Contains("comment") || name.Contains("string")) &&
                        !(name.Contains("xml doc tag")))
                     {
