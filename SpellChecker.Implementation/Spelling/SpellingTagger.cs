@@ -366,10 +366,7 @@ namespace Microsoft.VisualStudio.Language.Spellchecker
                 try
                 {
                     newMisspellings.AddRange(GetMisspellingsInSpans(naturalText, textBoxes));
-                } catch (Exception ex)
-                {
-
-                }
+                } catch { }
                 // Also remove empties
                 removed += currentMisspellings.RemoveAll(tag => tag.ToTagSpan(snapshot).Span.IsEmpty);
 

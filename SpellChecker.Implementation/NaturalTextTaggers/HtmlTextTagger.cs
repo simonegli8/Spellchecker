@@ -11,6 +11,7 @@ namespace Microsoft.VisualStudio.Language.Spellchecker
 {
     [Export(typeof(ITaggerProvider))]
     [ContentType("html")]
+    [ContentType("htmlx")]
     [TagType(typeof(NaturalTextTag))]
     internal class HtmlTextTaggerProvider : ITaggerProvider
     {
@@ -48,8 +49,11 @@ namespace Microsoft.VisualStudio.Language.Spellchecker
             }
         }
 
-#pragma warning disable 67
-        public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
-#pragma warning restore 67
+
+        public event EventHandler<SnapshotSpanEventArgs> TagsChanged
+        {
+            add { }
+            remove { }
+        }
     }
 }
